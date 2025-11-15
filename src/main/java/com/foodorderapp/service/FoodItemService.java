@@ -22,7 +22,8 @@ public class FoodItemService {
     }
     
     public List<FoodItem> getAvailableFoodItems() {
-        return foodItemRepository.findByAvailableTrue();
+    	List<FoodItem> foodItems = foodItemRepository.findByAvailableTrue();
+        return foodItems;
     }
     
     public Optional<FoodItem> getFoodItemById(Long id) {
